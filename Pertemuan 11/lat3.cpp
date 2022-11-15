@@ -17,7 +17,6 @@ class Graph {
             adj[w].push_back(v);
         }
         void tampilList(){
-            list <int> la;
             list<int>::iterator i;
             for(int v=0; v < V; v++){
                 cout << v;
