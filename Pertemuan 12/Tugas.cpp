@@ -2,7 +2,7 @@
 using namespace std;
 
 class Graph {
-    protected:
+    private:
         int v;
         list<int> adj[100];
         int pred[100];
