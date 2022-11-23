@@ -2,7 +2,7 @@
 using namespace std;
 
 class Graph {
-    private:
+    protected:
         int v;
         list<int> adj[100];
         int pred[100];
@@ -18,7 +18,6 @@ class Graph {
         }
 
         void showGraph(){
-        	cout << "---------"<<endl;
             for (int i = 0; i < v; i++)
             {
                 list<int>::iterator it;
@@ -31,6 +30,7 @@ class Graph {
         }
 
         void BFS(int start){
+            cout << "=======" << endl;
             bool visited[100];
             for (int i = 0; i < v; i++)
             {
