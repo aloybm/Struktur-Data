@@ -9,8 +9,8 @@ class Graph {
 
    public:
 	Graph(int V) {
-	    this->V = V;
-	    adj= vector<vector<int>>(V,vector<int>(V,0));
+	    	this->V = V;
+	    	adj= vector<vector<int>>(V,vector<int>(V,0));
 	}
 	void nameVertex(int i, string nama){
 		this->nama[i]=nama;
