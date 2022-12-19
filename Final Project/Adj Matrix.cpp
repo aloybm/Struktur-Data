@@ -19,11 +19,11 @@ class Graph {
             vector<int> vec (v+1, 0);
         }
         void nameVertex(int i, string nama){
-			this->nama[i]=nama;
-			vector<int>arr;
-			arr.push_back(i);
-			sort(arr.begin(), arr.end());
-		}
+	    this->nama[i]=nama;
+	    vector<int>arr;
+	    arr.push_back(i);
+	    sort(arr.begin(), arr.end());
+	}
 
         void addEdge(int u, int v, int w){
             adj[u][v] = w;
@@ -180,18 +180,18 @@ class Graph {
 
 int main(){
     Graph g(20);
-    g.nameVertex(1, "Rumah")					  ; g.nameVertex(11, "Alfamidi");
-	g.nameVertex(2, "Makam Sisingamangaraja XXI") ; g.nameVertex(12, "SMP BDB Balige");
-	g.nameVertex(3, "Toko Bangunan")			  ; g.nameVertex(13, "Resto");
-	g.nameVertex(4, "Toba Futsal")				  ; g.nameVertex(14, "Cafe");
-	g.nameVertex(5, "Kantor Bupati")			  ; g.nameVertex(15, "Hotel");
-	g.nameVertex(6, "Museum TB Silalahi")		  ; g.nameVertex(16, "Gereja");
-	g.nameVertex(7, "Kolam Renang")				  ; g.nameVertex(17, "SPBU");
-	g.nameVertex(8, "Bengkel") 					  ; g.nameVertex(18, "Taman");
-	g.nameVertex(9, "Kantin")					  ; g.nameVertex(19, "Bank Mandiri");
-	g.nameVertex(10, "SMAN 2 Balige")			  ; g.nameVertex(20, "Pasar");
+    g.nameVertex(1, "Rumah"); 				g.nameVertex(11, "Alfamidi");
+    g.nameVertex(2, "Makam Sisingamangaraja XXI");      g.nameVertex(12, "SMP BDB Balige");
+    g.nameVertex(3, "Toko Bangunan");  			g.nameVertex(13, "Resto");
+    g.nameVertex(4, "Toba Futsal"); 			g.nameVertex(14, "Cafe");
+    g.nameVertex(5, "Kantor Bupati"); 			g.nameVertex(15, "Hotel");
+    g.nameVertex(6, "Museum TB Silalahi"); 		g.nameVertex(16, "Gereja");
+    g.nameVertex(7, "Kolam Renang"); 			g.nameVertex(17, "SPBU");
+    g.nameVertex(8, "Bengkel"); 			g.nameVertex(18, "Taman");
+    g.nameVertex(9, "Kantin"); 				g.nameVertex(19, "Bank Mandiri");
+    g.nameVertex(10, "SMAN 2 Balige"); 			g.nameVertex(20, "Pasar");
 
-	g.addEdge(1,2,4);		g.addEdge(2,1,4);
+    g.addEdge(1,2,4);		g.addEdge(2,1,4);
     g.addEdge(1,3,2);		g.addEdge(3,1,2);
     g.addEdge(1,9,8);		g.addEdge(9,1,8);
     g.addEdge(2,4,1);		g.addEdge(4,2,1);
@@ -214,24 +214,22 @@ int main(){
     g.addEdge(15,17,12);	g.addEdge(17,15,12);
     g.addEdge(16,17,5);		g.addEdge(17,16,5);
     g.addEdge(16,18,8);		g.addEdge(18,16,8);
-	g.addEdge(17,18,8);		g.addEdge(18,17,8);
+    g.addEdge(17,18,8);		g.addEdge(18,17,8);
     g.addEdge(17,19,10);	g.addEdge(19,17,10);
     g.addEdge(18,19,4);		g.addEdge(19,18,4);
     g.addEdge(18,20,7);		g.addEdge(19,20,10);
-	g.addEdge(20,18,4);		g.addEdge(20,19,4);
+    g.addEdge(20,18,4);		g.addEdge(20,19,4);
   
-//    g.tampilList();
-//
-//	int start, end;
-//	cout << "start : ";
-//	cin >> start;
-//	cout << "end : ";
-//	cin >> end;
-
-	g.BFS(1, 17);
-//    g.DFS(start, end);
-//    g.dijkstra(start, end);
-//    
+    g.tampilList();
+    int start, end;
+    cout << "start : ";
+    cin >> start;
+    cout << "end : ";
+    cin >> end;
+    g.BFS(start, end);
+    g.DFS(start, end);
+    g.dijkstra(start, end);
+    return 0;    
     return 0;
     
 }
